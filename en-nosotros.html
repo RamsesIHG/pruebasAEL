@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About us | Arte En Luz</title>
+    <link rel="icon" href="logo.icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    /* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: b;a
+    overflow-y: auto;
+}
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Estilos del header y menú */
+header {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav li {
+    position: relative;
+    margin-right: 20px;
+}
+nav a{
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    width: 160%;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 10px;
+     z-index: 10;
+    }
+
+.submenu li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    }
+.submenu a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    }
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 7px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    }
+
+.button:hover {
+    background-color: black;
+    color: white;
+    text-decoration-color: white;
+    }
+
+/* Estilos de transición para una apertura más suave */
+.submenu{
+    transition: opacity 0.3s ease;
+    }
+
+
+.submenu a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    }
+
+li:hover .submenu {
+    display: block;
+    }
+
+/* Ajustes generales del submenú */
+    .submenu {
+    display: none; /* Oculto inicialmente */
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    width: 200px; /* Ajusta según tus necesidades */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+.submenu li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu li:last-child {
+    border-bottom: none; /* Elimina el borde del último elemento */
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 7px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: right;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+/* Estilos del footer */
+footer {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+  
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos generales del menú */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botón de menú para móvil */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .submenu {
+        position: relative;
+        left: 0;
+    }
+    }
+    body, html {
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        overflow-y: auto;
+    }
+    .page-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    /* Contenedor general */
+    .container4 {
+        display: flex; /* Usa Flexbox para el diseño del contenedor */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Alinea verticalmente los elementos en el contenedor */
+        padding: 15px; /* Espacio interno del contenedor */
+        background-color: white;
+        flex-wrap: wrap; /* Asegura que el contenido se envuelva en pantallas pequeñas */
+    }
+
+    /* Texto a la izquierda y la imagen a la derecha en pantallas grandes */
+    .container4 .text {
+        flex: 1; /* El texto ocupará la mitad del espacio */
+        text-align: left; /* Alinea el texto a la izquierda */
+        padding-right: 20px; /* Espacio a la derecha */
+    }
+
+    .container4 .image {
+        flex: 1; /* La imagen ocupará la mitad del espacio */
+        display: flex;
+        justify-content: center; /* Centra la imagen horizontalmente */
+        align-items: center; /* Centra la imagen verticalmente */
+    }
+
+    .container4 .image img {
+        width: 80%; /* Ajusta la imagen para que ocupe el 80% del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container4 {
+        flex-direction: column; /* Apila el texto y la imagen en columnas */
+        text-align: center; /* Centra el texto y la imagen */
+        align-items: center; /* Alinea todos los elementos al centro */
+    }
+
+    .container4 .text {
+        padding: 0 10px; /* Reduce los márgenes laterales */
+        align-items: center; /* Centra el texto */
+        display: flex;
+        justify-content: center;
+    }
+
+    .container4 .image img {
+        width: 100%; /* La imagen ocupará el ancho completo del contenedor */
+        margin-top: 20px; /* Añade un margen superior entre el texto y la imagen */
+    }
+}
+
+                 /* Menú y navegación para móvil ------------------------------------------*/
+                .menu {
+                    display: flex;
+                    list-style: none;
+                    gap: 20px;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .menu-toggle {
+                    display: none;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+
+                @media (max-width: 768px) {
+                    nav {
+                        position: relative;
+                    }
+
+                    .menu {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 60px;
+                        right: 0;
+                        background-color: #ffffff;
+                        width: 100%;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        padding: 10px;
+                    }
+
+                    .menu li {
+                        margin-bottom: 10px;
+                        text-align: left;
+                    }
+
+                    .menu-toggle {
+                        display: block;
+                    }
+
+                    .submenu {
+                        position: relative;
+                        left: 0;
+                    }
+
+                    /* Galería en columnas para dispositivos móviles */
+                    .projects-gallery {
+                        display: block;
+                    }
+
+                    .project-item {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                /* Estilo para mostrar el submenú cuando tiene la clase "active" */
+                .submenu.show {
+                    display: block;
+                }
+
+                /* Estilos para móviles */
+                @media (max-width: 768px) {
+
+                    
+                    .menu {
+                        display: none;
+                        flex-direction: column;
+                        background-color: white;
+                        padding: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .menu.active {
+                        display: flex;
+                    }
+
+                    /* Estilo del submenú para móviles */
+                    .submenu {
+                        margin-left: 20px; /* Alinea más a la derecha */
+                    }
+                }
+
+                /* Modificaciones específicas para vista móvil */
+                @media (max-width: 768px) {
+                    .gallery-item-horizontal {
+                        flex-direction: column; /* Cambiar la dirección del contenido */
+                        align-items: center;   /* Centrar los elementos */
+                    }
+
+                    .gallery-item-horizontal img {
+                        width: 100%; /* Imagen ocupa toda la parte superior */
+                        height: auto; /* Mantener proporciones */
+                        margin-right: 0; /* Eliminar espacio derecho */
+                        margin-bottom: 10px; /* Añadir separación entre la imagen y el texto */
+                    }
+
+                      .item-info-horizontal a {
+                            align-self: center; /* Asegura que el botón esté centrado */
+                            margin-top: 10px; /* Espacio superior opcional */
+                            text-decoration: none;
+                            background-color: black;
+                            color: white;
+                            padding: 10px 15px;
+                            border-radius: 5px;
+                            font-size: 1rem;
+                            transition: background-color 0.3s;
+                        }
+
+                }
+
+                /* Ajustes para móviles */
+                @media (max-width: 900px) {
+                    .submenu {
+                        display: none;
+                        flex-direction: column;
+                        position: relative;
+                        right: 0;
+                        background-color: #ffffff;
+                        width: 100%;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        padding: 10px;
+                    }
+
+                    .submenu li {
+                        margin: 0;
+                        padding: 10px;
+                        border-bottom: 1px solid #ddd;
+                    }
+
+                    .submenu.show {
+                        display: block;
+                    }
+                }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+         <header>
+                <nav>
+                    <h1>
+                        <a href="en-index.html">
+                            <img src="logo.png" alt="Descripción del logo" style="height: 50px;">
+                        </a>
+                    </h1>
+                    <button id="menu-toggle" class="menu-toggle">
+                        <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+                    </button>
+                    <ul class="menu">
+                        <li><a href="en-index.html">Home</a></li>
+                        <li><a href="en-galeria.html">Gallery</a></li>
+                        <li><a href="en-nosotros.html">About us</a></li>
+                        <li>
+                             <a class="menu-item" id="productMenu">Products ↓</a>
+                                <ul class="submenu" id="productSubmenu">
+                                    <li><a href="en-productosComerciales.html">Commercial</a></li>
+                                    <li><a href="en-productosResidenciales.html">Residential</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="en-contacto.html" class="button">Contact us</a></li>
+                            <li>  
+                                <a class="menu-item" id="languageMenu">
+                                    <img src="traductor.png" alt="Traductor" style="width: 30px; cursor: pointer;">
+                                </a>
+                                 <ul class="submenu" id="languageSubmenu">
+                                   <li><a href="nosotros.html">Español</a></li>
+                                    <li><a href="en-nosotros.html">English</a></li>
+                                </ul>
+                            </li>
+                        </ul>                      
+                    </nav>
+                </header>
+         <div class="page-container">
+        <div class="container4">
+            <div class="text">
+                <p class="content">
+                <h2>This is us</h2> <br>
+                    <p>Since 1993 we have been offering in Costa Rica the best brands with the latest trends worldwide for new lighting technologies that help improve the environment by saving energy and quality of life for users.</p><br>
+
+                    <p>Arte en Luz is a pioneer in bringing the best in innovation and technological development to Engineers, Architects, Consultants, Designers, Developers and Construction and Electromechanical Companies, so your lighting projects are a success.</p><br><br>
+
+                    <h2>Servicio Integral</h2><br>
+                    <p>Arte en Luz es líder en el país en sistemas de automatización e iluminación, gracias a un excelente equipo de profesionales dedicado a brindar asesoría, diseño en planos, importación, capacitación y servicio de post venta.</p><br>
+
+                    <p>Arte en Luz representa y distribuye marcas reconocidas y es importador directo de las fábricas.</p>
+
+                </p>
+            </div>
+            <div class="image">
+                <img src="nosotros.jpg" alt="Descripción de la imagen">
+                 <br><br><br>
+        </div> 
+    </div>
+
+          <!-- Zona de redes sociales -->
+    <br> <br> <br>
+           <footer 
+            style="border-top: 1px solid #ccc; padding: 20px; font-family: Arial, sans-serif; font-size: 14px; color: #666; display: flex; justify-content: space-between; align-items: center;">
+                  <!-- Sección de la imagen del negocio con enlace -->
+                  <div>
+                   <a href="en-index.html" target="_blank" rel="noopener noreferrer">
+                     <img src="logo.png" alt="Arte en Luz" style="height: 50px;">
+                    </a>
+                  </div>
+
+                  <!-- Sección de contacto -->
+                  <div style="text-align: center;">
+                    <p style="margin: 5px 0;">CR +506 2588-5600</p>
+                     <p style="margin: 5px 0;">arteenluz@arteenluz.com</p>
+                 
+                  </div>
+
+                  <!-- Sección de dirección -->
+                  <div style="text-align: center;">
+                    <p style="margin: 5px 0;">Avenida 10 Calle 11</p>
+                    <p style="margin: 5px 0;">San José - Costa Rica</p>
+                  </div>
+
+                  <!-- Íconos de redes sociales -->
+                  <div style="display: flex; gap: 10px;">
+                    <a href="https://www.facebook.com/arteenluz" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-facebook" style="font-size: 20px; color: #666;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arteenluz/" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-instagram" style="font-size: 20px; color: #666;"></i>
+                    </a>
+                    
+                    <a href="https://maps.app.goo.gl/NLaLL5UcXFGizq2k8" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-map-marker-alt" style="font-size: 20px; color: #666;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/arteenluz" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-linkedin" style="font-size: 20px; color: #666;"></i>
+                    </a>
+              </div>
+        </footer>
+    </div>
+
+    <script>
+         // Alternar submenú de idiomas
+        const languageMenu = document.getElementById('languageMenu');
+        const languageSubmenu = document.getElementById('languageSubmenu');
+
+        languageMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            languageSubmenu.classList.toggle('show'); // Alterna la clase 'show'
+        });
+
+       document.addEventListener('DOMContentLoaded', () => {
+        const productMenu = document.getElementById('productMenu'); // Opción "Productos"
+        const submenu = document.querySelector('.submenu'); // Submenú de "Productos"
+        const menuToggle = document.getElementById('menu-toggle'); // Botón hamburguesa
+        const menu = document.querySelector('.menu'); // Menú principal
+
+        // Alternar visibilidad del submenú al hacer clic en "Productos"
+        productMenu.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar comportamiento predeterminado
+            submenu.classList.toggle('show'); // Alternar visibilidad del submenú
+        });
+
+        // Mostrar/Ocultar el menú principal en móviles
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active'); // Mostrar/Ocultar menú principal
+        });
+
+        // Cerrar el submenú y el menú principal al hacer clic fuera
+        document.addEventListener('click', (event) => {
+            if (!submenu.contains(event.target) && !productMenu.contains(event.target)) {
+                submenu.classList.remove('show'); // Ocultar el submenú
+            }
+
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active'); // Ocultar el menú principal
+            }
+        });
+    });
+</script>
+</body>
+</html>
